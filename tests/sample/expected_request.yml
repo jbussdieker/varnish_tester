@@ -1,0 +1,11 @@
+---
+  :strict: true
+  :method: GET
+  :headers:
+    "User-Agent": "varnish_tester"
+    "Accept": "none"
+    "Host": "example.com"
+    "X-Forwarded-For": "127.0.0.1"
+    "Accept-Encoding": "gzip"
+  :ignore_headers:
+    - "X-Varnish"

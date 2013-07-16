@@ -1,0 +1,7 @@
+---
+  :method: GET
+  :headers:
+    "User-Agent": "varnish_tester"
+    "Accept": "none"
+    "Host": "example.com"
+    "Connection": "close"

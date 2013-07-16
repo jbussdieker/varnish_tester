@@ -1,0 +1,14 @@
+---
+  :strict: true
+  :http_version: 1.0
+  :code: 200
+  :headers:
+    "Server": "testserver"
+    "Via": "1.1 varnish"
+    "Content-Length": "2"
+    "Connection": "close"
+    "Age": "0"
+    "Accept-Ranges": "bytes"
+  :ignore_headers:
+    - "Date"
+    - "X-Varnish"

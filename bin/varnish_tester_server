@@ -7,10 +7,16 @@ require 'thin'
 
 Thin::Logging.silent = true
 
+@varnish = VarnishTester::Varnish.new
+
 def run_tests
+  @varnish.start
   Dir['tests/*'].each do |test_dir|
     VarnishTester::Test.new(test_dir).run
+    @varnish.restart if VarnishTester.config[:varnish_restart]
   end
+  @varnish.stop
 end
+
 
 run_tests

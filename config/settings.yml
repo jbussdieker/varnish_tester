@@ -1,3 +1,5 @@
 ---
+  :varnish_tmp: /tmp/varnish_tester
+  :varnish_restart: true
   :downstream_port: 7000
   :upstream_port: 8000
