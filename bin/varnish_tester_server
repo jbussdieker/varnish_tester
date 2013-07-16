@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require 'varnish_tester'
+require 'varnish_tester/server'
+require 'varnish_tester/client'
+
+require 'thin'
+
+Thin::Logging.silent = true
+
+def run_tests
+  Dir['tests/*'].each do |test_dir|
+    VarnishTester::Test.new(test_dir).run
+  end
+end
+
+run_tests
